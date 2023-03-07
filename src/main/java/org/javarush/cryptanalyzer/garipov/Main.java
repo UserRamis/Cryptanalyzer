@@ -1,6 +1,5 @@
 package org.javarush.cryptanalyzer.garipov;
-//System.out.println((char)65); будет А
-//   System.out.println( (int)'A' ); будет 65
+
 
 import java.io.File;
 import java.io.FileInputStream;
