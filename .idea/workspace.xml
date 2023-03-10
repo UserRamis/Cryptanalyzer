@@ -4,10 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="93dcfd01-6acb-425a-87b9-b2d9605386f2" name="Changes" comment="Add methods Alphabet(Enum), Encryption, Decryption.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/javarush/cryptanalyzer/garipov/Bruteforce.java" afterDir="false" />
+    <list default="true" id="93dcfd01-6acb-425a-87b9-b2d9605386f2" name="Changes" comment="The bruteforce method is half done">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/javarush/cryptanalyzer/garipov/StaticAnalysis.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Test.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/javarush/cryptanalyzer/garipov/Bruteforce.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/javarush/cryptanalyzer/garipov/Bruteforce.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/javarush/cryptanalyzer/garipov/Decryption.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/javarush/cryptanalyzer/garipov/Decryption.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/javarush/cryptanalyzer/garipov/Encryption.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/javarush/cryptanalyzer/garipov/Encryption.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/javarush/cryptanalyzer/garipov/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/javarush/cryptanalyzer/garipov/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -92,13 +96,21 @@
       <option name="project" value="LOCAL" />
       <updated>1678228465321</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="The bruteforce method is half done">
+      <created>1678309520014</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1678309520014</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First commit" />
     <MESSAGE value="Second commit" />
     <MESSAGE value="Add methods Alphabet(Enum), Encryption, Decryption." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add methods Alphabet(Enum), Encryption, Decryption." />
+    <MESSAGE value="The bruteforce method is half done" />
+    <option name="LAST_COMMIT_MESSAGE" value="The bruteforce method is half done" />
   </component>
 </project>

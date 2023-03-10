@@ -7,32 +7,21 @@ import java.io.IOException;
 
 public class Decryption
 {
-    File file;
-    int key;
-
-
-    File filenew = new File("DecryptNewFile");
-    public Decryption(File file,int key)
-    {
-        this.key=key;
-        this.file=file;
-    }
-
-    public File decryptionOperation() throws IOException {
+    public File decryptionOperation(File input,int key,File output) throws IOException {
 
        int keyForAlphabet=33 - (key % 33);
        int keyForNumber=10-(key%10);
        int keyForPunctuation=9-(key%9);
 
-        if (filenew.createNewFile()){
+        if (output.createNewFile()){
             System.out.println("File is created!");
         }
         else{
             System.out.println("File already exists.");
         }
-        FileWriter writer = new FileWriter (filenew);
+        FileWriter writer = new FileWriter (output);
 
-        try(FileReader reader = new FileReader(file))
+        try(FileReader reader = new FileReader(input))
         {
             int c;
             while((c=reader.read())!=-1){
@@ -66,12 +55,6 @@ public class Decryption
             System.out.println(ex.getMessage());
         }
         writer.close();
-        return filenew;
+        return output;
     }
-
-
-
-
-
-
 }

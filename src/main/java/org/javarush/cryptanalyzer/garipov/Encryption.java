@@ -1,14 +1,11 @@
 package org.javarush.cryptanalyzer.garipov;
-
 import java.io.*;
-
-
 public class Encryption
 {
     File file;
     int key;
 
-    File filenew = new File("EncryptNewFile");
+    File filenew = new File("EncryptNewFile.txt");
 
     public Encryption(File file,int key)
     {
@@ -63,8 +60,4 @@ public class Encryption
         writer.close();
         return filenew;
     }
-
-
-
-
 }

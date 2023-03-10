@@ -1,75 +1,85 @@
 package org.javarush.cryptanalyzer.garipov;
 import java.io.*;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class Bruteforce
 {
     File file;
-    File filenew = new File("ListNewFile");
-
+    File boot = new File("Bruteforce.txt");
 
     public Bruteforce(File file)
     {
         this.file=file;
     }
+    Decryption decryptionforbruteforce=new Decryption();
 
 
-    public File bruteforceOperation() throws IOException {
+    public File bruteforceOperation() throws IOException
+    {
+        boot.createNewFile();
+        boolean flag=false;
+        int key=1;
 
-
-        FileWriter writer = new FileWriter (filenew);
-
-        writer.write(findMaxChar(read(file)));
-
-        writer.close();
-
-        return filenew;
-
-
-
+      while (!flag)
+      {
+          boot= decryptionforbruteforce.decryptionOperation(file,key,boot);
+          if(containsSpacesBetweenWords(boot))
+          {
+              return boot;
+          }
+          else
+          {
+              boot=clearFileContent(boot);
+            key++;
+          }
+      }
+        return boot;
     }
 
-    public char[] read(File file) throws IOException {
-
-        char result[]=new char[length(file)];
-        List<String> listOfStrings = new ArrayList<String>();
-        listOfStrings = Files.readAllLines((file).toPath());
-        result = listOfStrings.toString().toCharArray();
-        return result;
-
-    }
-
-
-    public int length(File file) throws IOException {
-        FileInputStream fis = new FileInputStream(file);//считаем сколько символов в файле
-        byte[] byteArray = new byte[(int)file.length()];
-        fis.read(byteArray);
-        String data = new String(byteArray);
-        System.out.println("Number of characters in the String: "+data.length());
-        return data.length();
-    }
-
-
-    public static String findMaxChar(char[] result) {
-
-        int maxCount = 1;
-        char maxChar = result[0];
-        for(int i = 0, j = 0; i < result.length - 1; i = j){
-            int count = 1;
-            while (++j < result.length && result[i] == result[j]) {
-                count++;
-            }
-            if (count > maxCount) {
-                maxCount = count;
-                maxChar = result[i];
-            }
+    public File  clearFileContent(File file) {
+        try {
+            FileWriter fileWriter = new FileWriter(file);
+            fileWriter.write("");
+            fileWriter.close();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
-        return (maxChar + " = " + maxCount);
+        return file;
     }
+
+
+    public static boolean containsSpacesBetweenWords(File file) {
+        try {
+            Scanner scanner = new Scanner(file);
+
+            // Читаем файл построчно
+            while (scanner.hasNextLine()) {
+                String line = scanner.nextLine();
+
+                // Проверяем наличие пробелов между словами в каждой строке
+                if (line.contains(" ")) {
+                    scanner.close();
+                    return true;
+                }
+            }
+
+            scanner.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        return false;
+    }
+
+
+
+
+
+
+
+
+
+
 
 
 
