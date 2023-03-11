@@ -1,6 +1,7 @@
 package org.javarush.cryptanalyzer.garipov;
 import java.io.*;
-import java.util.Scanner;
+import java.nio.file.Files;
+import java.nio.file.Path;
 
 public class Bruteforce
 {
@@ -20,18 +21,28 @@ public class Bruteforce
         boolean flag=false;
         int key=1;
 
+        boot= decryptionforbruteforce.decryptionOperation(file,key,boot);
       while (!flag)
       {
           boot= decryptionforbruteforce.decryptionOperation(file,key,boot);
-          if(containsSpacesBetweenWords(boot))
+
+
+          String str1 = Files.readString((Path.of(boot.toURI())));
+          StringBuilder str= new StringBuilder(str1);
+
+          if(doesNotContainLongWords(str)&&!doesNotHavePreposition(str)&&!doesNotHaveEnoughSpaces(str))
           {
               return boot;
           }
           else
           {
-              boot=clearFileContent(boot);
+            boot=clearFileContent(boot);
             key++;
+            str.setLength(0);
+            str1=" ";
+
           }
+
       }
         return boot;
     }
@@ -48,27 +59,37 @@ public class Bruteforce
     }
 
 
-    public static boolean containsSpacesBetweenWords(File file) {
-        try {
-            Scanner scanner = new Scanner(file);
-
-            // Читаем файл построчно
-            while (scanner.hasNextLine()) {
-                String line = scanner.nextLine();
-
-                // Проверяем наличие пробелов между словами в каждой строке
-                if (line.contains(" ")) {
-                    scanner.close();
-                    return true;
-                }
+    private boolean doesNotContainLongWords(StringBuilder decryptedText) {
+        String[] array = decryptedText.toString().split(" ");
+        for (String s : array) {
+            if (s.length() > 30) {
+                return false;
             }
-
-            scanner.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
         }
+        return true;
+    }
 
-        return false;
+    private boolean doesNotHavePreposition(StringBuilder decryptedText) {
+        String[] array = decryptedText.toString().split(" ");
+        int count = 0;
+        for (String s : array) {
+            if (s.length() == 1) {
+                count++;
+            }
+        }
+        return count == 0;
+    }
+
+    private boolean doesNotHaveEnoughSpaces(StringBuilder decryptedText) {
+        String[] array = decryptedText.toString().split("\n");
+        int count = 0;
+        for (String s : array) {
+            if (s.contains(" ")) {
+                String[] arr = s.split(" ");
+                count += arr.length - 1;
+            }
+        }
+        return count < array.length;
     }
 
 
