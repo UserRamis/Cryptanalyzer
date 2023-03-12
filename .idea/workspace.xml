@@ -4,10 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="93dcfd01-6acb-425a-87b9-b2d9605386f2" name="Changes" comment="The bruteforce method is ready">
+    <list default="true" id="93dcfd01-6acb-425a-87b9-b2d9605386f2" name="Changes" comment="The bruteforce method is still in development">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/javarush/cryptanalyzer/garipov/CryptoAnalyzer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Test.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/javarush/cryptanalyzer/garipov/Alphabet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/javarush/cryptanalyzer/garipov/Alphabet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/javarush/cryptanalyzer/garipov/Bruteforce.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/javarush/cryptanalyzer/garipov/Bruteforce.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/javarush/cryptanalyzer/garipov/Decryption.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/javarush/cryptanalyzer/garipov/Decryption.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/javarush/cryptanalyzer/garipov/Encryption.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/javarush/cryptanalyzer/garipov/Encryption.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/javarush/cryptanalyzer/garipov/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/javarush/cryptanalyzer/garipov/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/javarush/cryptanalyzer/garipov/StaticAnalysis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/javarush/cryptanalyzer/garipov/StaticAnalysis.java" afterDir="false" />
     </list>
@@ -46,16 +50,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -107,7 +112,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678469831469</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="The bruteforce method is still in development">
+      <created>1678564990090</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1678564990090</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -116,6 +128,17 @@
     <MESSAGE value="Add methods Alphabet(Enum), Encryption, Decryption." />
     <MESSAGE value="The bruteforce method is half done" />
     <MESSAGE value="The bruteforce method is ready" />
-    <option name="LAST_COMMIT_MESSAGE" value="The bruteforce method is ready" />
+    <MESSAGE value="The bruteforce method is still in development" />
+    <option name="LAST_COMMIT_MESSAGE" value="The bruteforce method is still in development" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

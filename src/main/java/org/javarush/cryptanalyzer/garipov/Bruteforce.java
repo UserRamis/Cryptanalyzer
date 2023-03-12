@@ -22,28 +22,28 @@ public class Bruteforce
         int key=1;
 
         boot= decryptionforbruteforce.decryptionOperation(file,key,boot);
-      while (!flag)
-      {
-          boot= decryptionforbruteforce.decryptionOperation(file,key,boot);
+        while (!flag)
+        {
+            boot= decryptionforbruteforce.decryptionOperation(file,key,boot);
 
 
-          String str1 = Files.readString((Path.of(boot.toURI())));
-          StringBuilder str= new StringBuilder(str1);
+            String str1 = Files.readString((Path.of(boot.toURI())));
+            StringBuilder str= new StringBuilder(str1);
 
-          if(doesNotContainLongWords(str)&&!doesNotHavePreposition(str)&&!doesNotHaveEnoughSpaces(str))
-          {
-              return boot;
-          }
-          else
-          {
-            boot=clearFileContent(boot);
-            key++;
-            str.setLength(0);
-            str1=" ";
+            if(doesNotContainLongWords(str)&&!doesNotHavePreposition(str)&&!doesNotHaveEnoughSpaces(str))
+            {
+                return boot;
+            }
+            else
+            {
+                boot=clearFileContent(boot);
+                key++;
+                str.setLength(0);
+                str1=" ";
 
-          }
+            }
 
-      }
+        }
         return boot;
     }
 

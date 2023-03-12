@@ -9,9 +9,9 @@ public class Decryption
 {
     public File decryptionOperation(File input,int key,File output) throws IOException {
 
-       int keyForAlphabet=33 - (key % 33);
-       int keyForNumber=10-(key%10);
-       int keyForPunctuation=9-(key%9);
+        int keyForAlphabet=33 - (key % 33);
+        int keyForNumber=10-(key%10);
+        int keyForPunctuation=9-(key%9);
 
         if (output.createNewFile()){
             System.out.println("File is created!");

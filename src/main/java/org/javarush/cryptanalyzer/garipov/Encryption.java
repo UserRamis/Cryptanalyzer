@@ -9,7 +9,6 @@ public class Encryption
 
     public Encryption(File file,int key)
     {
-
         this.key=key;
         this.file=file;
     }
@@ -25,7 +24,6 @@ public class Encryption
 
         try(FileReader reader = new FileReader(file))
         {
-
             int c;
             while((c=reader.read())!=-1){
                 char ch=(char)c;
