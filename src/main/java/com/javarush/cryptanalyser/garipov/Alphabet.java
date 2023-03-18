@@ -1,4 +1,4 @@
-package org.javarush.cryptanalyzer.garipov;
+package com.javarush.cryptanalyser.garipov;
 
 public enum Alphabet {;
     static final String alphabetBig="АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ";

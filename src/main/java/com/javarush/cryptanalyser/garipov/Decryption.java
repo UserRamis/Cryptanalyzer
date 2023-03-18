@@ -1,4 +1,4 @@
-package org.javarush.cryptanalyzer.garipov;
+package com.javarush.cryptanalyser.garipov;
 
 import java.io.File;
 import java.io.FileReader;

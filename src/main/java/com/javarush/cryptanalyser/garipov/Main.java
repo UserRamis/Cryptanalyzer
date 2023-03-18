@@ -1,13 +1,15 @@
-package org.javarush.cryptanalyzer.garipov;
+package com.javarush.cryptanalyser.garipov;
 
 import java.io.*;
 
 
 public class Main {
 
-    static File txt = new File("Test.txt");//наш текст
+    static File txt = new File("input.txt");//наш текст
 
-   static File filenew = new File("DecryptNewFile.txt");//зашифрованный файл
+   static File filenew = new File("output.txt");//зашифрованный файл
+
+    static File author=new File("Author.txt");//текст автора
 
 
     public static void main(String[] args) throws IOException {
@@ -21,5 +23,9 @@ public class Main {
 
         Bruteforce bruteforce=new Bruteforce(ourfile);
         bruteforce.bruteforceOperation();
+
+
+
+
     }
 }

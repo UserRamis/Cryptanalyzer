@@ -1,11 +1,11 @@
-package org.javarush.cryptanalyzer.garipov;
+package com.javarush.cryptanalyser.garipov;
 import java.io.*;
 public class Encryption
 {
     File file;
     int key;
 
-    File filenew = new File("EncryptNewFile.txt");
+    File filenew = new File("encoded.txt");
 
     public Encryption(File file,int key)
     {

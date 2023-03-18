@@ -1,4 +1,4 @@
-package org.javarush.cryptanalyzer.garipov;
+package com.javarush.cryptanalyser.garipov;
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -18,7 +18,7 @@ public class Bruteforce
     public File bruteforceOperation() throws IOException
     {
         boot.createNewFile();
-        boolean flag=false;
+        boolean flag=true;
         int key=1;
 
         boot= decryptionforbruteforce.decryptionOperation(file,key,boot);
@@ -33,13 +33,14 @@ public class Bruteforce
             if(doesNotContainLongWords(str)&&!doesNotHavePreposition(str)&&!doesNotHaveEnoughSpaces(str))
             {
                 return boot;
+
             }
             else
             {
                 boot=clearFileContent(boot);
                 key++;
                 str.setLength(0);
-                str1=" ";
+                //str1=" ";
 
             }
 
