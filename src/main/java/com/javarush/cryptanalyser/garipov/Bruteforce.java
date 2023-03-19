@@ -18,8 +18,8 @@ public class Bruteforce
     public File bruteforceOperation() throws IOException
     {
         boot.createNewFile();
-        boolean flag=true;
-        int key=1;
+        boolean flag=false;
+        int key=0;
 
         boot= decryptionforbruteforce.decryptionOperation(file,key,boot);
         while (!flag)
