@@ -2,8 +2,8 @@ package com.javarush.cryptanalyser.garipov;
 import java.io.*;
 public class Encryption
 {
-    File file;
-    int key;
+   private File file;
+   private int key;
 
     File filenew = new File("encoded.txt");
 
@@ -13,49 +13,29 @@ public class Encryption
         this.file=file;
     }
     public File ecryptionOperation() throws IOException {
-        if (filenew.createNewFile()){
-            System.out.println("File is created!");
-        }
-        else{
-            System.out.println("File already exists.");
-        }
-
-        FileWriter writer = new FileWriter (filenew);
-
-        try(FileReader reader = new FileReader(file))
+        try(FileReader reader = new FileReader(file); FileWriter writer = new FileWriter (filenew))
         {
             int c;
             while((c=reader.read())!=-1){
                 char ch=(char)c;
-                System.out.print((char)c);
 
-                if(Alphabet.alphabetBig.contains(String.valueOf(ch)))
+                String[] charSets = {Alphabet.alphabetBig, Alphabet.alphabetLower, Alphabet.number, Alphabet.punctuation};
+                int[] modValues = {33, 33, 10, 9};
+                for (int i = 0; i < charSets.length; i++)
                 {
-                    int value = Alphabet.alphabetBig.indexOf(ch);//получаем индекс символа
-                    ch=Alphabet.alphabetBig.charAt((value+key)%33);
-                }
-                if(Alphabet.alphabetLower.contains(String.valueOf(ch)))
+                if(charSets[i].contains(String.valueOf(ch)))
                 {
-                    int value = Alphabet.alphabetLower.indexOf(ch);//получаем индекс символа
-                    ch=Alphabet.alphabetLower.charAt((value+key)%33);
+                    int value=charSets[i].indexOf(ch);
+                    ch=charSets[i].charAt((value+key)%modValues[i]);
+                    writer.write(ch);
+                    break;
                 }
-                if(Alphabet.number.contains(String.valueOf(ch)))
-                {
-                    int value = Alphabet.number.indexOf(ch);//получаем индекс символа
-                    ch=Alphabet.number.charAt((value+key)%10);
                 }
-                if(Alphabet.punctuation.contains(String.valueOf(ch)))
-                {
-                    int value = Alphabet.punctuation.indexOf(ch);//получаем индекс символа
-                    ch=Alphabet.punctuation.charAt((value+key)%9);
-                }
-                writer.write(ch);
             }
         }
         catch(IOException ex){
             System.out.println(ex.getMessage());
         }
-        writer.close();
         return filenew;
     }
 }
