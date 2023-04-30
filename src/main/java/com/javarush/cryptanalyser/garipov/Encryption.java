@@ -5,7 +5,7 @@ public class Encryption
    private File file;
    private int key;
 
-    File filenew = new File("encoded.txt");
+    File filenew = new File("encoded.txt");//зашифрованный файл
 
     public Encryption(File file,int key)
     {

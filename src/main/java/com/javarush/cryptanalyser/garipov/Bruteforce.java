@@ -5,8 +5,8 @@ import java.util.regex.Pattern;
 public class Bruteforce
 {
     private File file;
-    private  File boot = new File("Bruteforce.txt");
-    private  String s="^([а-яА-Я-]+(\\s|,\\s|:\\s|;\\s)){2,}";
+    private  File boot = new File("Bruteforce.txt");//расшифрованный файл методом грубого поиска
+    private  String s="^([а-яА-Я-]+(\\s|,\\s|:\\s|;\\s)){2,}";//регулярное выражение
     private Decryption decryptionforbruteforce=new Decryption();
     private  Pattern pattern = Pattern.compile(s);
     private StringBuilder stringBuilder = new StringBuilder();

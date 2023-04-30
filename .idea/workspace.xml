@@ -4,12 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="93dcfd01-6acb-425a-87b9-b2d9605386f2" name="Changes" comment="Changed Bruteforce">
+    <list default="true" id="93dcfd01-6acb-425a-87b9-b2d9605386f2" name="Changes" comment="Changed Encryption">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Bruteforce.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Bruteforce.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/encoded.txt" beforeDir="false" afterPath="$PROJECT_DIR$/encoded.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyser/garipov/Bruteforce.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyser/garipov/Bruteforce.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyser/garipov/Decryption.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyser/garipov/Decryption.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyser/garipov/Encryption.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyser/garipov/Encryption.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyser/garipov/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyser/garipov/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,7 +166,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682069024993</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Changed Encryption">
+      <created>1682074735032</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1682074735032</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -178,7 +188,8 @@
     <MESSAGE value="Package names have been changed" />
     <MESSAGE value="Has been changed main.java" />
     <MESSAGE value="Changed Bruteforce" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed Bruteforce" />
+    <MESSAGE value="Changed Encryption" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed Encryption" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
